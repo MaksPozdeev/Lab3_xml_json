@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="products.xsd">
+
+    <category>
+        <categoryname>Audio equipment</categoryname>
+        <subcategory>
+            <namesubcategory>mp3 players</namesubcategory>
+
+            <product>
+                <manufacturer>Ritmux</manufacturer>
+                <model>mp001</model>                    <!-- AA999(two letters and three numbers).-->
+                <DateOfManufacture>12-01-2018</DateOfManufacture> <!-- (DD-MM-YYYY).-->
+                <Color>Red</Color>
+                <Price>19.99</Price>
+                <Amount>7</Amount>
+            </product>
+
+            <product>
+                <manufacturer>SomY</manufacturer>
+                <model>mp002</model>
+                <DateOfManufacture>12-11-2018</DateOfManufacture>
+                <Color>Blue</Color>
+                <Price>29.99</Price>
+                <Amount>13</Amount>
+            </product>
+
+            <product>
+                <manufacturer>Dixp</manufacturer>
+                <model>mp003</model>
+                <DateOfManufacture>04-07-2018</DateOfManufacture>
+                <Color>Black</Color>
+                <Price>9.99</Price>
+                <Amount>15</Amount>
+            </product>
+
+        </subcategory>
+
+        <subcategory>
+            <namesubcategory>headphones</namesubcategory>
+
+            <product>
+                <manufacturer>A3Teh</manufacturer>
+                <model>ph001</model>
+                <DateOfManufacture>22-01-2018</DateOfManufacture>
+                <Color>White</Color>
+                <Price>29.99</Price>
+                <Amount>7</Amount>
+            </product>
+
+            <product>
+                <manufacturer>BurnLine</manufacturer>
+                <model>ph002</model>
+                <DateOfManufacture>13-11-2019</DateOfManufacture>
+                <Color>Red</Color>
+                <Price>24.49</Price>
+                <Amount>8</Amount>
+            </product>
+        </subcategory>
+
+        <subcategory>
+            <namesubcategory>hi-fi speakers</namesubcategory>
+            <product>
+                <manufacturer>Somy</manufacturer>
+                <model>as001</model>
+                <DateOfManufacture>22-11-2017</DateOfManufacture>
+                <Color>Brown</Color>
+                <Price>59.99</Price>
+                <Amount>4</Amount>
+            </product>
+
+            <product>
+                <manufacturer>Imaha</manufacturer>
+                <model>as002</model>
+                <DateOfManufacture>13-09-2019</DateOfManufacture>
+                <Color>Black</Color>
+                <Price>79.99</Price>
+                <Amount>3</Amount>
+            </product>
+        </subcategory>
+    </category>
+
+    <category>
+        <categoryname>Video equipment</categoryname>
+        <subcategory>
+            <namesubcategory>TV set</namesubcategory>
+            <product>
+                <manufacturer>Libis</manufacturer>
+                <model>tv001</model>
+                <DateOfManufacture>15-10-2016</DateOfManufacture>
+                <Color>Black</Color>
+                <Price>31.99</Price>
+                <Amount>3</Amount>
+            </product>
+
+            <product>
+                <manufacturer>Lizha</manufacturer>
+                <model>tv002</model>
+                <DateOfManufacture>21-11-2017</DateOfManufacture>
+                <Color>Black</Color>
+                <Price>29.99</Price>
+                <Amount>3</Amount>
+            </product>
+        </subcategory>
+
+        <subcategory>
+            <namesubcategory>Projectors</namesubcategory>
+            <product>
+                <manufacturer>BanK</manufacturer>
+                <model>pr001</model>
+                <DateOfManufacture>27-07-2018</DateOfManufacture>
+                <Color>Blue</Color>
+                <Price>57.99</Price>
+                <Amount>4</Amount>
+            </product>
+
+            <product>
+                <manufacturer>RickoM</manufacturer>
+                <model>pr002</model>
+                <DateOfManufacture>12-03-2017</DateOfManufacture>
+                <Color>Green</Color>
+                <Price>49.99</Price>
+                <Amount>3</Amount>
+            </product>
+        </subcategory>
+
+        <subcategory>
+            <namesubcategory>blu ray</namesubcategory>
+            <product>
+                <manufacturer>Dext</manufacturer>
+                <model>br001</model>
+                <DateOfManufacture>26-04-2027</DateOfManufacture>
+                <Color>Grey</Color>
+                <Price>17.99</Price>
+                <Amount>8</Amount>
+            </product>
+        </subcategory>
+    </category>
+
+</products>
