@@ -6,11 +6,9 @@
                 <xs:element name="category" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="categoryname" type="xs:string"/>
                             <xs:element name="subcategory" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="namesubcategory" type="xs:string"/>
                                         <xs:element name="product" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
@@ -44,9 +42,11 @@
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
+                                    <xs:attribute name="nameSubcategory" type="xs:string" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
+                        <xs:attribute name="nameCategory" type="xs:string" use="required"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
