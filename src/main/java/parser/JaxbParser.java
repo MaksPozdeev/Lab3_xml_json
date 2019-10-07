@@ -10,10 +10,11 @@ import java.io.FileReader;
 
 public class JaxbParser {
     public static void main(String[] args) {
+
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Products.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            String xmlFilePath = "F:\\develop\\Lab3_xml_json\\resources\\products.xml";
+            String xmlFilePath = "resources/products.xml";
             FileReader reader = new FileReader(xmlFilePath);
             Products products = (Products) unmarshaller.unmarshal(reader);
             System.out.println(products);
