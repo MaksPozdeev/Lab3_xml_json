@@ -30,7 +30,7 @@ public class StaxJaxbParser {
             Category category = boolElement.getValue();
             categoryList.add(category);
 
-            if (category.getNameCategory() != null) { 
+            if (category.getNameCategory() != null) {
                 System.out.println("Category name: " + category.getNameCategory());
             }
 

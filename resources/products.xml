@@ -9,27 +9,27 @@
                 <manufacturer>Ritmux</manufacturer>
                 <model>mp001</model>                    <!-- AA999(two letters and three numbers).-->
                 <dateOfManufacture>12-01-2018</dateOfManufacture> <!-- (DD-MM-YYYY).-->
-                <Color>Red</Color>
-                <Price>19.99</Price>
-                <Amount>7</Amount>
+                <color>Red</color>
+                <price>19.99</price>
+                <amount>7</amount>
             </product>
 
             <product>
                 <manufacturer>SomY</manufacturer>
                 <model>mp002</model>
                 <dateOfManufacture>12-11-2018</dateOfManufacture>
-                <Color>Blue</Color>
-                <Price>29.99</Price>
-                <Amount>13</Amount>
+                <color>Blue</color>
+                <price>29.99</price>
+                <amount>13</amount>
             </product>
 
             <product>
                 <manufacturer>Dixp</manufacturer>
                 <model>mp003</model>
                 <dateOfManufacture>04-07-2018</dateOfManufacture>
-                <Color>Black</Color>
-                <Price>9.99</Price>
-                <Amount>15</Amount>
+                <color>Black</color>
+                <price>9.99</price>
+                <amount>15</amount>
             </product>
 
         </subcategory>
@@ -40,18 +40,18 @@
                 <manufacturer>A3Teh</manufacturer>
                 <model>ph001</model>
                 <dateOfManufacture>22-01-2018</dateOfManufacture>
-                <Color>White</Color>
-                <Price>29.99</Price>
-                <Amount>7</Amount>
+                <color>White</color>
+                <price>29.99</price>
+                <amount>7</amount>
             </product>
 
             <product>
                 <manufacturer>BurnLine</manufacturer>
                 <model>ph002</model>
                 <dateOfManufacture>13-11-2019</dateOfManufacture>
-                <Color>Red</Color>
-                <Price>24.49</Price>
-                <Amount>8</Amount>
+                <color>Red</color>
+                <price>24.49</price>
+                <amount>8</amount>
             </product>
         </subcategory>
 
@@ -60,18 +60,18 @@
                 <manufacturer>Somy</manufacturer>
                 <model>as001</model>
                 <dateOfManufacture>22-11-2017</dateOfManufacture>
-                <Color>Brown</Color>
-                <Price>59.99</Price>
-                <Amount>4</Amount>
+                <color>Brown</color>
+                <price>59.99</price>
+                <amount>4</amount>
             </product>
 
             <product>
                 <manufacturer>Imaha</manufacturer>
                 <model>as002</model>
                 <dateOfManufacture>13-09-2019</dateOfManufacture>
-                <Color>Black</Color>
-                <Price>79.99</Price>
-                <Amount>3</Amount>
+                <color>Black</color>
+                <price>79.99</price>
+                <amount>3</amount>
             </product>
         </subcategory>
     </category>
@@ -82,18 +82,18 @@
                 <manufacturer>Libis</manufacturer>
                 <model>tv001</model>
                 <dateOfManufacture>15-10-2016</dateOfManufacture>
-                <Color>Black</Color>
-                <Price>31.99</Price>
-                <Amount>3</Amount>
+                <color>Black</color>
+                <price>31.99</price>
+                <amount>3</amount>
             </product>
 
             <product>
                 <manufacturer>Lizha</manufacturer>
                 <model>tv002</model>
                 <dateOfManufacture>21-11-2017</dateOfManufacture>
-                <Color>Black</Color>
-                <Price>29.99</Price>
-                <Amount>3</Amount>
+                <color>Black</color>
+                <price>29.99</price>
+                <amount>3</amount>
             </product>
         </subcategory>
 
@@ -102,18 +102,18 @@
                 <manufacturer>BanK</manufacturer>
                 <model>pr001</model>
                 <dateOfManufacture>27-07-2018</dateOfManufacture>
-                <Color>Blue</Color>
-                <Price>57.99</Price>
-                <Amount>4</Amount>
+                <color>Blue</color>
+                <price>57.99</price>
+                <amount>4</amount>
             </product>
 
             <product>
                 <manufacturer>RickoM</manufacturer>
                 <model>pr002</model>
                 <dateOfManufacture>12-03-2017</dateOfManufacture>
-                <Color>Green</Color>
-                <Price>49.99</Price>
-                <Amount>3</Amount>
+                <color>Green</color>
+                <price>49.99</price>
+                <amount>3</amount>
             </product>
         </subcategory>
 
@@ -122,9 +122,9 @@
                 <manufacturer>Dext</manufacturer>
                 <model>br001</model>
                 <dateOfManufacture>26-04-2027</dateOfManufacture>
-                <Color>Grey</Color>
-                <Price>17.99</Price>
-                <Amount>8</Amount>
+                <color>Grey</color>
+                <price>17.99</price>
+                <amount>8</amount>
             </product>
         </subcategory>
     </category>

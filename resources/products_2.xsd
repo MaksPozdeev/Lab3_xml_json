@@ -28,15 +28,15 @@
                                                             </xs:restriction>
                                                         </xs:simpleType>
                                                     </xs:element>
-                                                    <xs:element name="Color"> <!-- [a-zA-Z]{3,} -->
+                                                    <xs:element name="color"> <!-- [a-zA-Z]{3,} -->
                                                         <xs:simpleType>
                                                             <xs:restriction>
                                                                 <xs:pattern value="[a-zA-Z]{3,}"/>
                                                             </xs:restriction>
                                                         </xs:simpleType>
                                                     </xs:element>
-                                                    <xs:element name="Price" type="xs:float" default="0.0"/>
-                                                    <xs:element name="Amount" type="xs:integer" default="0"/>
+                                                    <xs:element name="price" type="xs:float" default="0.0"/>
+                                                    <xs:element name="amount" type="xs:integer" default="0"/>
 
                                                 </xs:sequence>
                                             </xs:complexType>
