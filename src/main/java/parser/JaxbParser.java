@@ -5,8 +5,8 @@ import entity.Products;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class JaxbParser {
     public static void main(String[] args) {
@@ -14,13 +14,14 @@ public class JaxbParser {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Products.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            String xmlFilePath = "src/main/resources/products.xml";
-            FileReader reader = new FileReader(xmlFilePath);
-            Products products = (Products) unmarshaller.unmarshal(reader);
 
+            File xmlFilePath = new File("src/main/resources/products.xml");
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(new FileInputStream(xmlFilePath), StandardCharsets.UTF_8));
+            Products products = (Products) unmarshaller.unmarshal(in);
             System.out.println(products);
 
-        } catch (JAXBException | FileNotFoundException e) {
+        } catch (JAXBException | IOException e) {
             e.printStackTrace();
         }
     }

@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 
 public class MainParser {
@@ -16,8 +17,6 @@ public class MainParser {
 
     public static void main(String[] args) throws IOException {
         String xmlFilePath = "src/main/resources/products.xml";
-        String xmlString = readUsingBufferedReader(xmlFilePath);
-//        System.out.println(xmlString);
         Products products = xmlToProducts(xmlFilePath);
         if (products != null) {
             System.out.println(products);
@@ -26,10 +25,10 @@ public class MainParser {
         if (products != null) {
             String jsonString = objToJson(products);
             System.out.println(jsonString);
-            int q = saveJsonInFile(jsonString, "NewJsonFile");
+            String newJsonFileName = "AnyJsonFile";
+            int q = saveJsonInFile(jsonString, newJsonFileName);
             System.out.println("q = " + q);
         }
-
     }
 
     private static Integer saveJsonInFile(String jsonString, String nameJson) {
@@ -37,15 +36,16 @@ public class MainParser {
         if (jsonString == null) {
             return -1;
         }
-        String newJsonFileName;
-        if (nameJson.isEmpty()) {
-            newJsonFileName = "NewJsonFile.json";
-        } else {
+        String newJsonFileName = "NewJsonFile.json";
+
+        if (!nameJson.isEmpty()) {
             newJsonFileName = nameJson + ".json";
         }
-        try (FileWriter writer = new FileWriter(newJsonFileName, false)) {
-            writer.write(jsonString);
-            writer.flush();
+
+        try (BufferedWriter bufferedWriter = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream(newJsonFileName), StandardCharsets.UTF_8))) {
+            bufferedWriter.write(jsonString);
+            bufferedWriter.flush();
             result = 1;
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,30 +64,14 @@ public class MainParser {
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Products.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            FileReader reader = new FileReader(xmlFilePath);
-            products = (Products) unmarshaller.unmarshal(reader);
+
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(new FileInputStream(xmlFilePath), StandardCharsets.UTF_8));
+            products = (Products) unmarshaller.unmarshal(in);
         } catch (JAXBException | FileNotFoundException e) {
             e.printStackTrace();
         }
         return products;
     }
 
-    private static String readUsingBufferedReader(String fileName) {
-
-        StringBuilder stringBuilder = new StringBuilder();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-            String line;
-            String ls = System.getProperty("line.separator");
-            while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append(ls);
-            }
-            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return stringBuilder.toString();
-    }
 }
