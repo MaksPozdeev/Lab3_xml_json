@@ -1,4 +1,4 @@
-package main.java.entity;
+package entity;
 
 import javax.xml.bind.annotation.*;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.List;
 @XmlType(name = "category")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Category {
+
     @XmlAttribute
     private String nameCategory;
 

@@ -1,4 +1,4 @@
-package main.java.entity;
+package entity;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,18 +8,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "product")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Product {
-    @XmlElement
+    @XmlElement(name = "manufacturer")
     private String manufacturer;
-    @XmlElement
+    @XmlElement(name = "model")
     private String model;
-    @XmlElement
+    @XmlElement(name = "dateOfManufacture")
     private String dateOfManufacture;
-    @XmlElement
+    @XmlElement(name = "color")
     private String color;
-    @XmlElement
-    private Float Price;
-    @XmlElement
-    private int Amount;
+    @XmlElement(name = "price")
+    private Float price;
+    @XmlElement(name = "amount")
+    private int amount;
 
     //    Block of methods
     public String getManufacturer() {
@@ -55,19 +55,19 @@ public class Product {
     }
 
     public Float getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(Float price) {
-        Price = price;
+        this.price = price;
     }
 
     public int getAmount() {
-        return Amount;
+        return amount;
     }
 
     public void setAmount(int amount) {
-        Amount = amount;
+        this.amount = amount;
     }
 
 
@@ -78,8 +78,8 @@ public class Product {
                 ", model='" + model + '\'' +
                 ", dateOfManufacture='" + dateOfManufacture + '\'' +
                 ", color='" + color + '\'' +
-                ", Price=" + Price +
-                ", Amount=" + Amount +
+                ", Price=" + price +
+                ", Amount=" + amount +
                 '}' +
                 "\n";
     }

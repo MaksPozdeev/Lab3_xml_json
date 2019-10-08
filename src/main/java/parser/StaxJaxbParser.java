@@ -1,6 +1,6 @@
-package main.java.parser;
+package parser;
 
-import main.java.entity.Category;
+import entity.Category;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -18,7 +18,7 @@ public class StaxJaxbParser {
         JAXBContext jc = JAXBContext.newInstance(Category.class);
         Unmarshaller unmarshaller = jc.createUnmarshaller();
         XMLInputFactory xmlFactory = XMLInputFactory.newInstance();
-        String xmlFilePath = "resources/products.xml";
+        String xmlFilePath = "src/main/resources/products.xml";
         XMLStreamReader reader = xmlFactory.createXMLStreamReader(new FileReader(xmlFilePath));
         List<Category> categoryList = new ArrayList<>();
         while (reader.hasNext() && (!reader.isStartElement() || !reader.getLocalName().equals("category"))) {
@@ -30,10 +30,9 @@ public class StaxJaxbParser {
             Category category = boolElement.getValue();
             categoryList.add(category);
 
-            if (category.getNameCategory() != null) {
-                System.out.println("Category name: " + category.getNameCategory());
-            }
-
+//            if (category.getNameCategory() != null) {
+//                System.out.println("Category name: " + category.getNameCategory());
+//            }
             if (reader.getEventType() == XMLStreamConstants.CHARACTERS) {
                 reader.next();
             }
@@ -41,5 +40,6 @@ public class StaxJaxbParser {
         reader.close();
 
         categoryList.forEach(System.out::println);
+
     }
 }

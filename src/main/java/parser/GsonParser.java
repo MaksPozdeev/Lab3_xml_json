@@ -1,8 +1,8 @@
-package main.java.parser;
+package parser;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import main.java.entity.Product;
+import entity.Product;
 
 public class GsonParser {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

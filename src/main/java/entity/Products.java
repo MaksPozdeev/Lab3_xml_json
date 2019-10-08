@@ -1,4 +1,4 @@
-package main.java.entity;
+package entity;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -6,9 +6,10 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlRootElement
+@XmlRootElement(name = "products")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Products {
+
     @XmlElement(name = "category")
     private List<Category> categoryList;
 
